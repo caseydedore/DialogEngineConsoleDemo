@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ConversationData>
+  <Actors>
+    <Actor ID="1">Computer</Actor>
+    <Actor ID="2">User</Actor>
+  </Actors>
+</ConversationData>
