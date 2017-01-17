@@ -1,8 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<ConversationData>
+<Conversation StartingStatementLinkID="1">
+  
+  
   <Actors>
     <Actor ID="1">Computer</Actor>
     <Actor ID="2">User</Actor>
   </Actors>
-</ConversationData>
+  
+  
+  <StatementLinks>
+    <StatementLink ID="1">
+      <Link ActorID="1" NextLinkID="2" StatementID="1" />
+      <Requirements></Requirements>
+      <Modifiers></Modifiers>
+    </StatementLink>
+    
+    <StatementLink ID="2">
+      <Link ActorID="2" NextLinkID="3" StatementID="2" />
+      <Requirements></Requirements>
+      <Modifiers></Modifiers>
+    </StatementLink>
+
+    <StatementLink ID="3">
+      <Link ActorID="2" StatementID="4" />
+      <Requirements></Requirements>
+      <Modifiers></Modifiers>
+    </StatementLink>
+  </StatementLinks>
+  
+  
+  <Statements>
+    <Statement ID="1">This is a statement</Statement>
+    <Statement ID="2">This is another statement</Statement>
+    <Statement ID="3">Now I say something</Statement>
+    <Statement ID="4">I will say something too</Statement>
+  </Statements>
+
+  
+  <Conditions>
+    <Condition Name="" Max="5" Min="-5">0</Condition>
+  </Conditions>
+  
+  
+</Conversation>

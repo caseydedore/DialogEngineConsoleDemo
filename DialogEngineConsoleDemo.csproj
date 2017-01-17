@@ -33,8 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DialogEngine">
-      <HintPath>..\..\..\DialogEngine\DialogEngine\bin\Debug\DialogEngine.dll</HintPath>
+    <Reference Include="DialogEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DialogEngine\DialogEngine\bin\Debug\DialogEngine.dll</HintPath>
     </Reference>
     <Reference Include="FileDataReader">
       <HintPath>..\..\..\FileDataReader\FileDataReader\bin\Debug\FileDataReader.dll</HintPath>

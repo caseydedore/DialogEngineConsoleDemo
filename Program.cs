@@ -18,10 +18,10 @@ namespace DialogEngineConsoleDemo
             var data = program.LoadData(); 
         }
 
-        private ConversationData LoadData()
+        private Conversation LoadData()
         {
             var fileData = fileReader.Load(Path.GetFullPath("Data"), "conversation.xml");
-            var xmlData = xmlReader.Deserialize<ConversationData>(fileData);
+            var xmlData = xmlReader.Deserialize<Conversation>(fileData);
 
             return xmlData;
         }
