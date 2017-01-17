@@ -10,20 +10,20 @@
   
   
   <StatementLinks>
-    <StatementLink ID="1">
-      <Link ActorID="1" NextLinkID="2" StatementID="1" />
+    <StatementLink ID="1" ActorID="1">
+      <Link NextLinkID="2" StatementID="1" />
       <Requirements></Requirements>
       <Modifiers></Modifiers>
     </StatementLink>
     
-    <StatementLink ID="2">
-      <Link ActorID="2" NextLinkID="3" StatementID="2" />
+    <StatementLink ID="2" ActorID="2">
+      <Link NextLinkID="3" StatementID="2" />
       <Requirements></Requirements>
       <Modifiers></Modifiers>
     </StatementLink>
 
-    <StatementLink ID="3">
-      <Link ActorID="2" StatementID="4" />
+    <StatementLink ID="3" ActorID="2">
+      <Link StatementID="4" />
       <Requirements></Requirements>
       <Modifiers></Modifiers>
     </StatementLink>
