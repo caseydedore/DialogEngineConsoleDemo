@@ -37,10 +37,12 @@ namespace DialogEngineConsoleDemo
             {
                 Console.Clear();
 
+                Console.WriteLine(result.CurrentActor.Name + ":");
+
                 var index = 1;
                 foreach(var s in result.Statements)
                 {
-                    Console.WriteLine(index + ": " + s.Dialog);
+                    Console.WriteLine(index++ + ": " + s.Dialog);
                 }
 
                 userInput = Console.ReadKey();
