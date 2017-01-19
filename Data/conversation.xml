@@ -18,29 +18,69 @@
     
     <StatementLink ID="2" ActorID="2">
       <Link NextLinkID="3" StatementID="2" />
+      <Link NextLinkID="4" StatementID="3" />
+      <Link NextLinkID="5" StatementID="4" />
       <Requirements></Requirements>
       <Modifiers></Modifiers>
     </StatementLink>
 
     <StatementLink ID="3" ActorID="1">
-      <Link NextLinkID="4" StatementID="3" />
+      <Link NextLinkID="6" StatementID="5" />
+    </StatementLink>
+
+    <StatementLink ID="4" ActorID="1">
+      <Link NextLinkID="6" StatementID="6" />
+    </StatementLink>
+
+    <StatementLink ID="5" ActorID="1">
+      <Link NextLinkID="10" StatementID="7" />
+    </StatementLink>
+
+    <StatementLink ID="6" ActorID="2">
+      <Link NextLinkID="7" StatementID="8" />
+      <Link NextLinkID="8" StatementID="9" />
+      <Link NextLinkID="9" StatementID="10" />
       <Requirements></Requirements>
       <Modifiers></Modifiers>
     </StatementLink>
 
-    <StatementLink ID="4" ActorID="2">
-      <Link StatementID="4" />
-      <Requirements></Requirements>
-      <Modifiers></Modifiers>
+    <StatementLink ID="7" ActorID="1">
+      <Link StatementID="11" />
+    </StatementLink>
+    
+    <StatementLink ID="8" ActorID="1">
+      <Link StatementID="12" />
+    </StatementLink>
+
+    <StatementLink ID="9" ActorID="1">
+      <Link StatementID="7" />
+    </StatementLink>
+
+    <StatementLink ID="10" ActorID="1">
+      <Link NextLinkID="6" StatementID="13" />
     </StatementLink>
   </StatementLinks>
   
   
   <Statements>
-    <Statement ID="1">This is a statement</Statement>
-    <Statement ID="2">This is another statement</Statement>
-    <Statement ID="3">Now I say something</Statement>
-    <Statement ID="4">I will say something too</Statement>
+    <Statement ID="1">Hi. This is the dialog demo.</Statement>
+    
+    <Statement ID="2">What is that?</Statement>
+    <Statement ID="3">I already know about this.</Statement>
+    <Statement ID="4">Who cares? [Rude]</Statement>
+    
+    <Statement ID="5">The demo showcases fully data driven conversation! How are you liking it so far?</Statement>
+    <Statement ID="6">Oh you do? Are you just here because you like talking? Well what do you think about it? [Friendly]</Statement>
+    <Statement ID="7">Wow, you are abrasive! This is what I get for trying? [Agitated]</Statement>
+
+    <Statement ID="8">It's pretty neat.</Statement>
+    <Statement ID="9">I want to use it in my project!</Statement>
+    <Statement ID="10">It sucks hardcore! [Rude]</Statement>
+
+    <Statement ID="11">Glad you like it!</Statement>
+    <Statement ID="12">Neat! You can find it at <![CDATA[https://github.com/caseydedore/DialogEngine]]></Statement>
+    
+    <Statement ID="13">Anyway... The demo, for those who care, showcases fully data driven conversation. Do you even care?</Statement>
   </Statements>
 
   

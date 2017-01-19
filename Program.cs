@@ -46,9 +46,12 @@ namespace DialogEngineConsoleDemo
                 }
 
                 userInput = Console.ReadKey();
+                var input = program.GetChoiceOrDefault(userInput.KeyChar.ToString()) - 1;
+
+                if (!program.CheckRange(input, 0, result.Statements.Count)) input = 0;
 
                 action = new ConversationAction();
-                action.ChosenStatement = result.Statements[0];
+                action.ChosenStatement = result.Statements[input];
                 action.CurrentStatementLink = result.CurrentStatementLink;
 
                 result = program.director.Advance(action);
@@ -61,6 +64,27 @@ namespace DialogEngineConsoleDemo
             var xmlData = xmlReader.Deserialize<Conversation>(fileData);
 
             return xmlData;
+        }
+
+        private int GetChoiceOrDefault(string choice, int defaultNumber = 1)
+        {
+            var convertedChoice = defaultNumber;
+
+            try
+            {
+                convertedChoice = Convert.ToInt32(choice);
+            }
+            catch
+            {
+                convertedChoice = defaultNumber;
+            }
+
+            return convertedChoice;
+        }
+
+        private bool CheckRange(int number, int min, int max)
+        {
+            return (number <= max && number >= min);
         }
     }
 }
