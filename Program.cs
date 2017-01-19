@@ -28,12 +28,12 @@ namespace DialogEngineConsoleDemo
 
             var userInput = new ConsoleKeyInfo();
 
-            var result = new ConversationResult();
+            ConversationResult result = null;
             var action = new ConversationAction();
 
             result = program.director.Start();
 
-            while(userInput.Key != ConsoleKey.Escape && result.Statements.Count > 0)
+            while(userInput.Key != ConsoleKey.Escape && result.Status == ConversationStatus.Active)
             {
                 Console.Clear();
 

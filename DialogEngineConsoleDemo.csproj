@@ -36,8 +36,9 @@
     <Reference Include="DialogEngine">
       <HintPath>..\..\DialogEngine\DialogEngine\bin\Debug\DialogEngine.dll</HintPath>
     </Reference>
-    <Reference Include="FileDataReader">
-      <HintPath>..\..\..\FileDataReader\FileDataReader\bin\Debug\FileDataReader.dll</HintPath>
+    <Reference Include="FileDataReader, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FileDataReader\FileDataReader\bin\Debug\FileDataReader.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
