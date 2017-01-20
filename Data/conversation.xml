@@ -1,27 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Conversation StartingStatementLinkID="1">
-  
-  
+
+
   <Actors>
     <Actor ID="1">Computer</Actor>
     <Actor ID="2">User</Actor>
   </Actors>
-  
-  
+
+
   <StatementLinks>
     <StatementLink ID="1" ActorID="1">
       <Link NextLinkID="2" StatementID="1" />
-      <Requirements></Requirements>
-      <Modifiers></Modifiers>
     </StatementLink>
-    
+
     <StatementLink ID="2" ActorID="2">
       <Link NextLinkID="3" StatementID="2" />
       <Link NextLinkID="4" StatementID="3" />
-      <Link NextLinkID="5" StatementID="4" />
-      <Requirements></Requirements>
-      <Modifiers></Modifiers>
+      <Link NextLinkID="5" StatementID="4">
+        <Modifier ConditionName="ComputerMood">-1</Modifier>
+      </Link>
     </StatementLink>
 
     <StatementLink ID="3" ActorID="1">
@@ -37,56 +35,77 @@
     </StatementLink>
 
     <StatementLink ID="6" ActorID="2">
-      <Link NextLinkID="7" StatementID="8" />
-      <Link NextLinkID="8" StatementID="9" />
-      <Link NextLinkID="9" StatementID="10" />
-      <Requirements></Requirements>
-      <Modifiers></Modifiers>
+      <Link NextLinkID="8" StatementID="8" />
+      <Link NextLinkID="8" StatementID="9">
+        <Modifier ConditionName="ComputerMood">1</Modifier>
+      </Link>
+      <Link NextLinkID="8" StatementID="10">
+        <Modifier ConditionName="ComputerMood">-2</Modifier>
+      </Link>
+      <Link NextLinkID="11" StatementID="14">
+        <Modifier ConditionName="ComputerMood">-1</Modifier>
+      </Link>
     </StatementLink>
 
-    <StatementLink ID="7" ActorID="1">
-      <Link StatementID="11" />
-    </StatementLink>
-    
     <StatementLink ID="8" ActorID="1">
-      <Link StatementID="12" />
-    </StatementLink>
-
-    <StatementLink ID="9" ActorID="1">
-      <Link StatementID="7" />
+      <Link StatementID="11">
+        <Requirement ConditionName="ComputerMood" Operator="==">1</Requirement>
+      </Link>
+      <Link StatementID="12">
+        <Requirement ConditionName="ComputerMood" Operator="&gt;=">2</Requirement>
+      </Link>
+      <Link StatementID="16">
+        <Requirement ConditionName="ComputerMood" Operator="==">0</Requirement>
+      </Link>
+      <Link StatementID="15">
+        <Requirement ConditionName="ComputerMood" Operator="&lt;=">-1</Requirement>
+      </Link>
     </StatementLink>
 
     <StatementLink ID="10" ActorID="1">
       <Link NextLinkID="6" StatementID="13" />
     </StatementLink>
+
+    <StatementLink ID="11" ActorID="1">
+      <Link NextLinkID="8" StatementID="17" />
+    </StatementLink>
+
   </StatementLinks>
-  
-  
+
+
   <Statements>
     <Statement ID="1">Hi. This is the dialog demo.</Statement>
-    
+
     <Statement ID="2">What is that?</Statement>
     <Statement ID="3">I already know about this.</Statement>
     <Statement ID="4">Who cares? [Rude]</Statement>
-    
+
     <Statement ID="5">The demo showcases fully data driven conversation! How are you liking it so far?</Statement>
     <Statement ID="6">Oh you do? Are you just here because you like talking? Well what do you think about it? [Friendly]</Statement>
     <Statement ID="7">Wow, you are abrasive! This is what I get for trying? [Agitated]</Statement>
 
-    <Statement ID="8">It's pretty neat.</Statement>
+    <Statement ID="8">It's alright.</Statement>
     <Statement ID="9">I want to use it in my project!</Statement>
     <Statement ID="10">It sucks hardcore! [Rude]</Statement>
 
     <Statement ID="11">Glad you like it!</Statement>
     <Statement ID="12">Neat! You can find it at <![CDATA[https://github.com/caseydedore/DialogEngine]]></Statement>
-    
-    <Statement ID="13">Anyway... The demo, for those who care, showcases fully data driven conversation. Do you even care?</Statement>
+
+    <Statement ID="13">Anyway... The demo showcases a fully data driven conversation system. Do you even care?</Statement>
+
+    <Statement ID="14">This is boring. I want to go shooting space pirate nazis like a decent piece of software would let me. [Rude]</Statement>
+
+    <Statement ID="15">Let's end this. I hope I never talk to you again! [Angry]</Statement>
+    <Statement ID="16">The demo is here if you want another look. Goodbye.</Statement>
+
+
+    <Statement ID="17">Seriously?!?</Statement>
   </Statements>
 
-  
+
   <Conditions>
-    <Condition Name="" Max="5" Min="-5">0</Condition>
+    <Condition Name="ComputerMood" Max="5" Min="-5">1</Condition>
   </Conditions>
-  
-  
+
+
 </Conversation>

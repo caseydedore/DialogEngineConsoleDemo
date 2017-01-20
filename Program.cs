@@ -23,8 +23,10 @@ namespace DialogEngineConsoleDemo
 
             program.director = new ConversationDirector(data);
 
-            Console.WriteLine("Data Processed. Press enter to continue...");
-            Console.ReadLine();
+            Console.WriteLine("Data Processed.");
+            Console.WriteLine("Use the number keys to advance the following conversation.");
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
 
             var userInput = new ConsoleKeyInfo();
 
@@ -48,7 +50,7 @@ namespace DialogEngineConsoleDemo
                 userInput = Console.ReadKey();
                 var input = program.GetChoiceOrDefault(userInput.KeyChar.ToString()) - 1;
 
-                if (!program.CheckRange(input, 0, result.Statements.Count)) input = 0;
+                if (!program.CheckRange(input, 0, result.Statements.Count - 1)) input = 0;
 
                 action = new ConversationAction();
                 action.ChosenStatement = result.Statements[input];
