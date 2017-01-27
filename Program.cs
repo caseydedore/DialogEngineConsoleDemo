@@ -62,10 +62,17 @@ namespace DialogEngineConsoleDemo
 
         private Conversation LoadData()
         {
-            var fileData = fileReader.Load(Path.GetFullPath("Data"), "conversation.xml");
-            var xmlData = xmlReader.Deserialize<Conversation>(fileData);
+            var conversation = new Conversation();
 
-            return xmlData;
+            var conversationData = fileReader.Load(Path.GetFullPath("Data"), "conversation.xml");
+            conversation = xmlReader.Deserialize<Conversation>(conversationData);
+
+            var statementData = fileReader.Load(Path.GetFullPath("Data"), "statements.xml");
+            var statements = xmlReader.Deserialize<Conversation>(statementData);
+
+            conversation.Statements = statements.Statements;
+
+            return conversation;
         }
 
         private int GetChoiceOrDefault(string choice, int defaultNumber = 1)

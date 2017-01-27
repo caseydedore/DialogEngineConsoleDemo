@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Conversation>
+
+  <Statements>
+    <Statement ID="1">Hi. This is the dialog demo.</Statement>
+
+    <Statement ID="2">What is that?</Statement>
+    <Statement ID="3">I already know about this.</Statement>
+    <Statement ID="4">Who cares? [Rude]</Statement>
+
+    <Statement ID="5">The demo showcases fully data driven conversation! How are you liking it so far?</Statement>
+    <Statement ID="6">Oh you do? Are you just here because you like talking? Well what do you think about it? [Friendly]</Statement>
+    <Statement ID="7">Wow, you are abrasive! This is what I get for trying? [Agitated]</Statement>
+
+    <Statement ID="8">It's alright.</Statement>
+    <Statement ID="9">I want to use it in my project!</Statement>
+    <Statement ID="10">It sucks hardcore! [Rude]</Statement>
+
+    <Statement ID="11">Glad you like it!</Statement>
+    <Statement ID="12">Neat! You can find it at <![CDATA[https://github.com/caseydedore/DialogEngine]]></Statement>
+
+    <Statement ID="13">Anyway... The demo showcases a fully data driven conversation system. Do you even care?</Statement>
+
+    <Statement ID="14">This is boring. I want to go shooting space pirate nazis like a decent piece of software would let me. [Rude]</Statement>
+
+    <Statement ID="15">Let's end this. I hope I never talk to you again! [Angry]</Statement>
+    <Statement ID="16">The demo is here if you want another look. Goodbye.</Statement>
+
+
+    <Statement ID="17">Seriously?!?</Statement>
+  </Statements>
+
+</Conversation>
