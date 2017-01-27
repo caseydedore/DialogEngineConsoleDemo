@@ -35,12 +35,12 @@
     </StatementLink>
 
     <StatementLink ID="6" ActorID="2">
-      <Link NextLinkID="8" StatementID="8" />
-      <Link NextLinkID="8" StatementID="9">
+      <Link NextLinkID="12" StatementID="8" />
+      <Link NextLinkID="12" StatementID="9">
         <Modifier ConditionName="ComputerMood">1</Modifier>
       </Link>
-      <Link NextLinkID="8" StatementID="10">
-        <Modifier ConditionName="ComputerMood">-2</Modifier>
+      <Link NextLinkID="12" StatementID="10">
+        <Modifier ConditionName="ComputerMood">-3</Modifier>
       </Link>
       <Link NextLinkID="11" StatementID="14">
         <Modifier ConditionName="ComputerMood">-1</Modifier>
@@ -67,7 +67,41 @@
     </StatementLink>
 
     <StatementLink ID="11" ActorID="1">
-      <Link NextLinkID="8" StatementID="17" />
+      <Link NextLinkID="12" StatementID="17" />
+    </StatementLink>
+
+    <StatementLink ID="12" ActorID="1">
+      <Link NextLinkID="14" StatementID="19">
+        <Requirement ConditionName="ComputerMood" Operator="&gt;=">-1</Requirement>
+        <Requirement ConditionName="ComputerMood" Operator="&lt;">2</Requirement>
+      </Link>
+      <Link NextLinkID="14" StatementID="18">
+        <Requirement ConditionName="ComputerMood" Operator="&gt;=">2</Requirement>
+      </Link>
+      <Link NextLinkID="13" StatementID="20">
+        <Requirement ConditionName="ComputerMood" Operator="&lt;=">-2</Requirement>
+      </Link>
+    </StatementLink>
+
+    <StatementLink ID="13" ActorID="1">
+      <Link NextLinkID="14" StatementID="21" />
+    </StatementLink>
+
+    <StatementLink ID="14" ActorID="1">
+      <Link NextLinkID="15" StatementID="22"/>
+    </StatementLink>
+    
+    <StatementLink ID="15" ActorID="2">
+      <Link NextLinkID="8" StatementID="23">
+        <Modifier ConditionName="ComputerMood">3</Modifier>
+      </Link>
+      <Link NextLinkID="8" StatementID="24"/>
+      <Link NextLinkID="8" StatementID="25">
+        <Modifier ConditionName="ComputerMood">-1</Modifier>
+      </Link>
+      <Link NextLinkID="8" StatementID="25">
+        <Modifier ConditionName="ComputerMood">-2</Modifier>
+      </Link>
     </StatementLink>
 
   </StatementLinks>

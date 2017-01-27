@@ -18,17 +18,30 @@
     <Statement ID="10">It sucks hardcore! [Rude]</Statement>
 
     <Statement ID="11">Glad you like it!</Statement>
-    <Statement ID="12">Neat! You can find it at <![CDATA[https://github.com/caseydedore/DialogEngine]]></Statement>
+    <Statement ID="12">I know! You can find it at <![CDATA[https://github.com/caseydedore/DialogEngine]]></Statement>
 
     <Statement ID="13">Anyway... The demo showcases a fully data driven conversation system. Do you even care?</Statement>
 
-    <Statement ID="14">This is boring. I want to go shooting space pirate nazis like a decent piece of software would let me. [Rude]</Statement>
+    <Statement ID="14">I want to go shooting space pirate nazis like a decent piece of software would let me. [Rude]</Statement>
 
     <Statement ID="15">Let's end this. I hope I never talk to you again! [Angry]</Statement>
     <Statement ID="16">The demo is here if you want another look. Goodbye.</Statement>
 
-
     <Statement ID="17">Seriously?!?</Statement>
+
+    <Statement ID="18">What is really cool is how the Engine can track user specified values that need to persist for the conversation.</Statement>
+    <Statement ID="19">The Engine can track user specified values that need to persist for the duration of the conversation.</Statement>
+    <Statement ID="20">You're really a jerkass, you know that? Made me mad... thats only partially thanks to you. The rest is thanks to the Engine.</Statement>
+    
+    <Statement ID="21">The engine can track values, such as my mood. Yea. Angry.</Statement>
+
+    <Statement ID="22">These values are entirely unknown to the Engine until the user adds one. They can be modified based on the events of the conversation, and used to determine conversation flow.</Statement>
+
+    <Statement ID="23">You're the best, Dialog Engine!</Statement>
+    <Statement ID="24">Interesting.</Statement>
+    <Statement ID="25">Ok. Boring.</Statement>
+    <Statement ID="25">Yuck! Get me OUT OF HERE!</Statement>
+    
   </Statements>
 
 </Conversation>
