@@ -29,13 +29,13 @@
 
     <Statement ID="17">Seriously?!?</Statement>
 
-    <Statement ID="18">What is really cool is how the Engine can track user specified values that need to persist for the conversation.</Statement>
-    <Statement ID="19">The Engine can track user specified values that need to persist for the duration of the conversation.</Statement>
-    <Statement ID="20">You're really a jerkass, you know that? Made me mad... thats only partially thanks to you. The rest is thanks to the Engine.</Statement>
+    <Statement ID="18">What is really cool is how the Engine can track custom-specified values that need to persist for the conversation.</Statement>
+    <Statement ID="19">The Engine can track custom-specified values that need to persist for the duration of the conversation.</Statement>
+    <Statement ID="20">You know, you're making me MAD... thats only partially thanks to you. The rest is thanks to the capabilities of this Engine. It's enabled me to fume at you, tool.</Statement>
     
-    <Statement ID="21">The engine can track values, such as my mood. Yea. Angry.</Statement>
+    <Statement ID="21">The engine can track custom values and maintain their state, such as my mood. Yea. Angry.</Statement>
 
-    <Statement ID="22">These values are entirely unknown to the Engine until the user adds one. They can be modified based on the events of the conversation, and used to determine conversation flow.</Statement>
+    <Statement ID="22">These values are entirely unknown to the Engine until they are added. They can be modified based on the events of the conversation, and used to determine conversation flow.</Statement>
 
     <Statement ID="23">You're the best, Dialog Engine!</Statement>
     <Statement ID="24">Interesting.</Statement>

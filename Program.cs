@@ -24,7 +24,7 @@ namespace DialogEngineConsoleDemo
             program.director = new ConversationDirector(data);
 
             Console.WriteLine("Data Processed.");
-            Console.WriteLine("Use the number keys to advance the following conversation.");
+            Console.WriteLine("Use the number keys to advance the following conversation when the 'User' (you) is presented with conversation options.");
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
@@ -38,8 +38,10 @@ namespace DialogEngineConsoleDemo
             while(userInput.Key != ConsoleKey.Escape && result.Status == ConversationStatus.Active)
             {
                 Console.Clear();
-
+                program.SetTextColorAsDefault();
                 Console.WriteLine(result.CurrentActor.Name + ":");
+                var isUserTurn = result.Statements.Count > 1;
+                program.SetTextColorBasedOnTurn(isUserTurn);
 
                 var index = 1;
                 foreach(var s in result.Statements)
@@ -57,6 +59,23 @@ namespace DialogEngineConsoleDemo
                 action.CurrentStatementLink = result.CurrentStatementLink;
 
                 result = program.director.Advance(action);
+            }
+        }
+
+        private void SetTextColorAsDefault()
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private void SetTextColorBasedOnTurn(bool isUserTurn)
+        {
+            if (isUserTurn)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.White;
             }
         }
 
