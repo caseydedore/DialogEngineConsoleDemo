@@ -18,11 +18,11 @@ namespace DialogEngineConsoleDemo
         public static void Main(string[] args)
         {
             var program = new Program();
-
             var data = program.LoadData();
 
             program.director = new ConversationDirector(data);
 
+            program.SetTextColorToDefault();
             Console.WriteLine("Data Processed.");
             Console.WriteLine("Use the number keys to advance the following conversation when the 'User' (you) is presented with conversation options.");
             Console.WriteLine("Press any key to continue...");
@@ -37,10 +37,10 @@ namespace DialogEngineConsoleDemo
 
             while(userInput.Key != ConsoleKey.Escape && result.Status == ConversationStatus.Active)
             {
-                Console.Clear();
-                program.SetTextColorAsDefault();
-                Console.WriteLine(result.CurrentActor.Name + ":");
                 var isUserTurn = result.Statements.Count > 1;
+                Console.Clear();
+                program.SetUserTitleTextColorBasedOnTurn(isUserTurn);
+                Console.WriteLine(result.CurrentActor.Name + ":");
                 program.SetTextColorBasedOnTurn(isUserTurn);
 
                 var index = 1;
@@ -62,9 +62,21 @@ namespace DialogEngineConsoleDemo
             }
         }
 
-        private void SetTextColorAsDefault()
+        private void SetTextColorToDefault()
         {
             Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private void SetUserTitleTextColorBasedOnTurn(bool isUserTurn)
+        {
+            if (isUserTurn)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+            }
         }
 
         private void SetTextColorBasedOnTurn(bool isUserTurn)
@@ -75,7 +87,7 @@ namespace DialogEngineConsoleDemo
             }
             else
             {
-                Console.ForegroundColor = ConsoleColor.White;
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
         }
 
